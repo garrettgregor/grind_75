@@ -13,7 +13,7 @@ RSpec.describe MergeTwo do
         expect(instance.merge_two_lists(list_1, list_2)).to eq(result)
       end
 
-      xit "takes two empty lists and combines them into an empty list" do
+      it "takes two empty lists and combines them into an empty list" do
         list_1 = []
         list_2 = []
         result = []
@@ -21,7 +21,7 @@ RSpec.describe MergeTwo do
         expect(instance.merge_two_lists(list_1, list_2)).to eq(result)
       end
 
-      xit "takes an empty list and a populated list and combines them into a sorted empty list" do
+      it "takes an empty list and a populated list and combines them into a sorted empty list" do
         list_1 = []
         list_2 = [0]
         result = [0]
