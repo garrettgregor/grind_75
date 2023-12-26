@@ -12,8 +12,22 @@ RSpec.describe Stock do
         expect(instance.max_profit(prices)).to eq(result)
       end
 
-      xit "returns a value of zero if a profit can't be made" do
+      it "returns a value of zero if a profit can't be made" do
         prices = [7,6,4,3,1]
+        result = 0
+
+        expect(instance.max_profit(prices)).to eq(result)
+      end
+
+      it "returns a value of zero if a profit can't be made" do
+        prices = [2,4,1]
+        result = 2
+
+        expect(instance.max_profit(prices)).to eq(result)
+      end
+
+      it "returns a value of zero for an empty array" do
+        prices = []
         result = 0
 
         expect(instance.max_profit(prices)).to eq(result)
