@@ -1,11 +1,7 @@
 class Anagram
   def is_anagram?(s, t)
-    permutations = []
-
     t.chars.permutation(t.length) do |permutation|
-      permutations << permutation.join
+      return true if permutation.join == s
     end
-
-    permutations.include?(s)
   end
 end
