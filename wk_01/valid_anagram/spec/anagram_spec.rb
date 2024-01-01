@@ -23,6 +23,18 @@ RSpec.describe Anagram do
         t = "car"
 
         expect(instance.is_anagram?(s, t)).to eq(false)
+
+        s = "rat"
+        t = "carr"
+
+        expect(instance.is_anagram?(s, t)).to eq(false)
+      end
+
+      it "returns result within the time complexity" do
+        s = "ltjupwrxip"
+        t = "uprtjlixwp"
+
+        expect(instance.is_anagram?(s, t)).to eq(true)
       end
     end
   end
