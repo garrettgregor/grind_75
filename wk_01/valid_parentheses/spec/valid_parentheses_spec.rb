@@ -15,6 +15,7 @@ RSpec.describe ValidParentheses do
         expect(instance.is_valid?("((")).to be(false)
         expect(instance.is_valid?("(())")).to be(true)
         expect(instance.is_valid?("{[]}")).to be(true)
+        expect(instance.is_valid?("{[}]")).to be(false)
         expect(instance.is_valid?("{1[23]4}")).to be(true)
       end
     end
